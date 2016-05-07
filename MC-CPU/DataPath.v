@@ -74,13 +74,14 @@ module DataPath(decode, clk, reset, zero, RegWre, PCWre, IRWre, ALUSrcB, ALUOp, 
 
 	// ~~~~~~~~~~~~~~~~~~~ ASSIGNMENTS ~~~~~~~~~~~~~~~~~~~ //
 	wire [15:0] immediate;
-	wire [4:0] rs, rt, rd;
+	wire [4:0] rs, rt, rd, sa;
 	wire [25:0] j_address;
 	assign decode = IRout[31:26];
 	assign immediate = IRout[15:0];
 	assign rs = IRout[25:21];
 	assign rt = IRout[20:16];
 	assign rd = IRout[15:11];
+	assign sa = IRout[10:6];
 	assign j_address[25:0] = IRout[25:0];
 
 	// ~~~~~~~~~~~~~~~~~~~ MEMORY ~~~~~~~~~~~~~~~~~~~ //

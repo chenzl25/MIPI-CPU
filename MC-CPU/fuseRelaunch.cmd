@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "E:/MC-CPU/CPUTest_isim_beh.exe" -prj "E:/MC-CPU/CPUTest_beh.prj" "CPUTest" "work.glbl" 
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "C:/Users/chenzl25/Desktop/MIPS-CPU/MC-CPU/CPUTest_isim_beh.exe" -prj "C:/Users/chenzl25/Desktop/MIPS-CPU/MC-CPU/CPUTest_beh.prj" "work.CPUTest" "work.glbl" 

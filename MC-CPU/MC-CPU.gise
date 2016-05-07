@@ -76,7 +76,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1462627217" xil_pn:in_ck="-3991571013880635781" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1462627217">
+    <transform xil_pn:end_ts="1462639356" xil_pn:in_ck="-3991571013880635781" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1462639356">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="ALU.v"/>
@@ -106,7 +106,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1462627217" xil_pn:in_ck="-3991571013880635781" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1462627217">
+    <transform xil_pn:end_ts="1462639356" xil_pn:in_ck="-3991571013880635781" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1462639356">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="ALU.v"/>
@@ -124,7 +124,7 @@
       <outfile xil_pn:name="sign_extend.v"/>
       <outfile xil_pn:name="zero_extend.v"/>
     </transform>
-    <transform xil_pn:end_ts="1462627222" xil_pn:in_ck="-3991571013880635781" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="6088735805108973343" xil_pn:start_ts="1462627217">
+    <transform xil_pn:end_ts="1462639361" xil_pn:in_ck="-3991571013880635781" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="6088735805108973343" xil_pn:start_ts="1462639356">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="CPUTest_beh.prj"/>
@@ -134,7 +134,7 @@
       <outfile xil_pn:name="isim.log"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1462627222" xil_pn:in_ck="7283760191954107915" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-8798872753633896382" xil_pn:start_ts="1462627222">
+    <transform xil_pn:end_ts="1462639362" xil_pn:in_ck="7283760191954107915" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-8798872753633896382" xil_pn:start_ts="1462639361">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="CPUTest_isim_beh.wdb"/>
