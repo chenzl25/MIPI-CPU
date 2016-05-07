@@ -1,0 +1,26 @@
+Running: G:\ISE14.4\14.4\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -o E:/CUP/CPUTest_isim_beh.exe -prj E:/CUP/CPUTest_beh.prj work.CPUTest work.glbl 
+ISim P.49d (signature 0x7708f090)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Analyzing Verilog file "E:/CUP/CPU.v" into library work
+Analyzing Verilog file "E:/CUP/CPUTest.v" into library work
+Analyzing Verilog file "G:/ISE14.4/14.4/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling module PC
+Compiling module InsMemory
+Compiling module ControlUnit
+Compiling module Extend
+Compiling module RegFile
+Compiling module Data_Memory
+Compiling module ALU
+Compiling module CPU
+Compiling module CPUTest
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Waiting for 3 sub-compilation(s) to finish...
+Compiled 10 Verilog Units
+Built simulation executable E:/CUP/CPUTest_isim_beh.exe
+Fuse Memory Usage: 28880 KB
+Fuse CPU Usage: 999 ms

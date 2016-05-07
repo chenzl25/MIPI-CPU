@@ -1,0 +1,58 @@
+Release 14.4 - xst P.49d (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to E:/CUP/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.18 secs
+ 
+--> Parameter xsthdpdir set to E:/CUP/xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.19 secs
+ 
+--> WARNING:Xst:3164 - Option "-debug" found multiple times in the command line. Only the first occurence is considered.
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "CPU.v" in library work
+Compiling verilog include file "ControlUnit.v"
+ERROR:HDLCompilers:26 - "ControlUnit.v" line 34 unexpected token: '.'
+ERROR:HDLCompilers:207 - "ControlUnit.v" line 37 Signal 'clk' is not referenced in the module port list
+ERROR:HDLCompilers:207 - "ControlUnit.v" line 38 Signal 'reset' is not referenced in the module port list
+Compiling verilog include file "Memory.v"
+Module <ControlUnit> compiled
+Compiling verilog include file "PC.v"
+Module <Data_Memory> compiled
+Compiling verilog include file "RegFile.v"
+Module <PC> compiled
+Compiling verilog include file "InsMemory.v"
+Module <RegFile> compiled
+Compiling verilog include file "Extend.v"
+Module <InsMemory> compiled
+Compiling verilog include file "ALU.v"
+Module <Extend> compiled
+Compiling verilog include file "AluCache.v"
+Module <ALU> compiled
+ERROR:HDLCompilers:27 - "AluCache.v" line 26 Illegal redeclaration of 'alu_cache_data_out'
+Compiling verilog include file "MemCache.v"
+Module <AluCache> compiled
+Compiling verilog include file "InsCache.v"
+Module <MemCache> compiled
+Compiling verilog include file "Reg1Cache.v"
+Module <InsCache> compiled
+Compiling verilog include file "Reg2Cache.v"
+Module <Reg1Cache> compiled
+Module <Reg2Cache> compiled
+Module <CPU> compiled
+Analysis of file <"MemCache.prj"> failed.
+--> 
+
+Total memory usage is 257816 kilobytes
+
+Number of errors   :    4 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

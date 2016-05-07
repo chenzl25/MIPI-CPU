@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="error" file="HDLCompilers" num="27" delta="new" ><arg fmt="%s" index="1">&quot;CPU.v&quot; line 50 </arg>Illegal redeclaration of &apos;<arg fmt="%s" index="2">pc_from_PC</arg>&apos;
+</msg>
+
+<msg type="error" file="HDLCompilers" num="27" delta="new" ><arg fmt="%s" index="1">&quot;CPU.v&quot; line 53 </arg>Illegal redeclaration of &apos;<arg fmt="%s" index="2">branch_offset</arg>&apos;
+</msg>
+
+<msg type="error" file="HDLCompilers" num="27" delta="new" ><arg fmt="%s" index="1">&quot;CPU.v&quot; line 54 </arg>Illegal redeclaration of &apos;<arg fmt="%s" index="2">rs</arg>&apos;
+</msg>
+
+<msg type="error" file="HDLCompilers" num="27" delta="new" ><arg fmt="%s" index="1">&quot;CPU.v&quot; line 55 </arg>Illegal redeclaration of &apos;<arg fmt="%s" index="2">rt</arg>&apos;
+</msg>
+
+<msg type="error" file="HDLCompilers" num="27" delta="new" ><arg fmt="%s" index="1">&quot;CPU.v&quot; line 56 </arg>Illegal redeclaration of &apos;<arg fmt="%s" index="2">rd</arg>&apos;
+</msg>
+
+<msg type="error" file="HDLCompilers" num="27" delta="new" ><arg fmt="%s" index="1">&quot;CPU.v&quot; line 57 </arg>Illegal redeclaration of &apos;<arg fmt="%s" index="2">decode</arg>&apos;
+</msg>
+
+<msg type="error" file="HDLCompilers" num="27" delta="new" ><arg fmt="%s" index="1">&quot;CPU.v&quot; line 58 </arg>Illegal redeclaration of &apos;<arg fmt="%s" index="2">immd</arg>&apos;
+</msg>
+
+<msg type="error" file="HDLCompilers" num="27" delta="new" ><arg fmt="%s" index="1">&quot;CPU.v&quot; line 59 </arg>Illegal redeclaration of &apos;<arg fmt="%s" index="2">rs_data</arg>&apos;
+</msg>
+
+<msg type="error" file="HDLCompilers" num="27" delta="new" ><arg fmt="%s" index="1">&quot;CPU.v&quot; line 59 </arg>Illegal redeclaration of &apos;<arg fmt="%s" index="2">rt_data</arg>&apos;
+</msg>
+
+<msg type="error" file="HDLCompilers" num="27" delta="new" ><arg fmt="%s" index="1">&quot;CPU.v&quot; line 65 </arg>Illegal redeclaration of &apos;<arg fmt="%s" index="2">data_write_to_register</arg>&apos;
+</msg>
+
+<msg type="error" file="HDLCompilers" num="27" delta="new" ><arg fmt="%s" index="1">&quot;CPU.v&quot; line 66 </arg>Illegal redeclaration of &apos;<arg fmt="%s" index="2">address_write_to_register</arg>&apos;
+</msg>
+
+<msg type="error" file="HDLCompilers" num="27" delta="new" ><arg fmt="%s" index="1">&quot;CPU.v&quot; line 68 </arg>Illegal redeclaration of &apos;<arg fmt="%s" index="2">_ALU_a</arg>&apos;
+</msg>
+
+<msg type="error" file="HDLCompilers" num="27" delta="new" ><arg fmt="%s" index="1">&quot;CPU.v&quot; line 68 </arg>Illegal redeclaration of &apos;<arg fmt="%s" index="2">_ALU_b</arg>&apos;
+</msg>
+
+<msg type="error" file="HDLCompilers" num="27" delta="new" ><arg fmt="%s" index="1">&quot;CPU.v&quot; line 68 </arg>Illegal redeclaration of &apos;<arg fmt="%s" index="2">_ALU_result</arg>&apos;
+</msg>
+
+</messages>
+

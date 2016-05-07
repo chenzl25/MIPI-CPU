@@ -1,0 +1,58 @@
+Release 14.4 - xst P.49d (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to E:/CUP/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.18 secs
+ 
+--> Parameter xsthdpdir set to E:/CUP/xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.19 secs
+ 
+--> WARNING:Xst:3164 - Option "-debug" found multiple times in the command line. Only the first occurence is considered.
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "CPU.v" in library work
+Compiling verilog include file "ControlUnit.v"
+Compiling verilog include file "Memory.v"
+Module <ControlUnit> compiled
+Compiling verilog include file "PC.v"
+Module <Data_Memory> compiled
+Compiling verilog include file "RegFile.v"
+Module <PC> compiled
+Compiling verilog include file "InsMemory.v"
+Module <RegFile> compiled
+Compiling verilog include file "Extend.v"
+Module <InsMemory> compiled
+Compiling verilog include file "ALU.v"
+Module <Extend> compiled
+Module <ALU> compiled
+ERROR:HDLCompilers:27 - "CPU.v" line 50 Illegal redeclaration of 'pc_from_PC'
+ERROR:HDLCompilers:27 - "CPU.v" line 53 Illegal redeclaration of 'branch_offset'
+ERROR:HDLCompilers:27 - "CPU.v" line 54 Illegal redeclaration of 'rs'
+ERROR:HDLCompilers:27 - "CPU.v" line 55 Illegal redeclaration of 'rt'
+ERROR:HDLCompilers:27 - "CPU.v" line 56 Illegal redeclaration of 'rd'
+ERROR:HDLCompilers:27 - "CPU.v" line 57 Illegal redeclaration of 'decode'
+ERROR:HDLCompilers:27 - "CPU.v" line 58 Illegal redeclaration of 'immd'
+ERROR:HDLCompilers:27 - "CPU.v" line 59 Illegal redeclaration of 'rs_data'
+ERROR:HDLCompilers:27 - "CPU.v" line 59 Illegal redeclaration of 'rt_data'
+ERROR:HDLCompilers:27 - "CPU.v" line 65 Illegal redeclaration of 'data_write_to_register'
+ERROR:HDLCompilers:27 - "CPU.v" line 66 Illegal redeclaration of 'address_write_to_register'
+ERROR:HDLCompilers:27 - "CPU.v" line 68 Illegal redeclaration of '_ALU_a'
+ERROR:HDLCompilers:27 - "CPU.v" line 68 Illegal redeclaration of '_ALU_b'
+ERROR:HDLCompilers:27 - "CPU.v" line 68 Illegal redeclaration of '_ALU_result'
+Module <CPU> compiled
+Analysis of file <"CPU.prj"> failed.
+--> 
+
+Total memory usage is 257816 kilobytes
+
+Number of errors   :   14 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

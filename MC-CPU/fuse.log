@@ -1,0 +1,44 @@
+Running: G:\ISE14.4\14.4\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -o E:/MC-CPU/CPUTest_isim_beh.exe -prj E:/MC-CPU/CPUTest_beh.prj CPUTest work.glbl 
+ISim P.49d (signature 0x7708f090)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Analyzing Verilog file "E:/MC-CPU/zero_extend.v" into library work
+Analyzing Verilog file "E:/MC-CPU/sign_extend.v" into library work
+Analyzing Verilog file "E:/MC-CPU/RegFile.v" into library work
+Analyzing Verilog file "E:/MC-CPU/read_mux.v" into library work
+Analyzing Verilog file "E:/MC-CPU/mux_2bit.v" into library work
+Analyzing Verilog file "E:/MC-CPU/mux_1bit.v" into library work
+Analyzing Verilog file "E:/MC-CPU/IMem.v" into library work
+Analyzing Verilog file "E:/MC-CPU/holding_reg.v" into library work
+Analyzing Verilog file "E:/MC-CPU/DMem.v" into library work
+Analyzing Verilog file "E:/MC-CPU/ALU.v" into library work
+Analyzing Verilog file "E:/MC-CPU/DataPath.v" into library work
+Analyzing Verilog file "E:/MC-CPU/CU.v" into library work
+Analyzing Verilog file "E:/MC-CPU/CPU.v" into library work
+Analyzing Verilog file "E:/MC-CPU/CPUTest.v" into library work
+Analyzing Verilog file "G:/ISE14.4/14.4/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+WARNING:HDLCompiler:1016 - "E:/MC-CPU/DataPath.v" Line 122: Port resetData is not connected to this instance
+Completed static elaboration
+Compiling module CU
+Compiling module IMem
+Compiling module DMem
+Compiling module RegFile
+Compiling module holding_reg
+Compiling module zero_extend
+Compiling module sign_extend
+Compiling module read_mux
+Compiling module mux_1bit
+Compiling module mux_2bit
+Compiling module ALU
+Compiling module DataPath
+Compiling module CPU
+Compiling module CPUTest
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Waiting for 8 sub-compilation(s) to finish...
+Compiled 15 Verilog Units
+Built simulation executable E:/MC-CPU/CPUTest_isim_beh.exe
+Fuse Memory Usage: 29064 KB
+Fuse CPU Usage: 1108 ms

@@ -1,0 +1,5 @@
+set -tmpdir "E:/CUP/xst/projnav.tmp"
+set -xsthdpdir "E:/CUP/xst"
+elaborate
+-ifn ControlUnit.prj
+-ifmt mixed
