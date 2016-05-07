@@ -44,6 +44,7 @@ module CPUTest;
 	wire test_ExtSel;
 	wire test_InsMemRW;
 	wire test_WrRegData;
+	wire test_SAExt;
 	wire [2:0] test_state, test_next_state;
 	wire [31:0] PCout;
 
@@ -66,6 +67,7 @@ module CPUTest;
 		.test_ExtSel(test_ExtSel), 
 		.test_InsMemRW(test_InsMemRW), 
 		.test_WrRegData(test_WrRegData), 
+		.test_SAExt(test_SAExt),
 		.test_state(test_state),
 		.test_next_state(test_next_state),
 		.PCout(PCout)
@@ -83,7 +85,7 @@ module CPUTest;
 		#10;
 		reset = 0;
 		
-		#1000 $stop;
+		#2000 $stop;
 		// Add stimulus here
 
 	end

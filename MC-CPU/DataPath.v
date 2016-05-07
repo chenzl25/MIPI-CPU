@@ -19,11 +19,11 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module DataPath(decode, clk, reset, zero, RegWre, PCWre, IRWre, ALUSrcB, ALUOp, ALUM2Reg, RegOut, DataMemRw,
-     PCSrc, ExtSel, InsMemRW, WrRegData, initPC, PCout);
+     PCSrc, ExtSel, InsMemRW, WrRegData, SAExt, initPC, PCout);
 	input clk;
 	input reset;
 	output [5:0] decode;
-	input RegWre,PCWre,zero,ALUSrcB,ALUM2Reg,DataMemRw,ExtSel, InsMemRW, IRWre, WrRegData;
+	input RegWre,PCWre,zero,ALUSrcB,ALUM2Reg,DataMemRw,ExtSel, InsMemRW, IRWre, WrRegData, SAExt;
 	input [1:0] PCSrc;
 	input [1:0] RegOut;
 	input [2:0] ALUOp;
@@ -51,7 +51,7 @@ module DataPath(decode, clk, reset, zero, RegWre, PCWre, IRWre, ALUSrcB, ALUOp, 
 	wire [word_size-1:0] MDRout;
 	wire [word_size-1:0] MDRin;
 	// Sign/Zero Extension
-	wire [word_size-1:0] immZE, immSE;
+	wire [word_size-1:0] immZE, immSE, saSAE;
 
 	// Reg File
 	wire [4:0] write_address;
@@ -62,7 +62,8 @@ module DataPath(decode, clk, reset, zero, RegWre, PCWre, IRWre, ALUSrcB, ALUOp, 
 	wire [word_size-1:0] Aout, Bout;
 	
 	// extend
-	wire [word_size-1:0] extend_wire;
+	wire [word_size-1:0] top_extend_wire;
+	wire [word_size-1:0] origin_extend_wire;
 
 	// ALU
 	wire [word_size-1:0]	sourceB;
@@ -127,18 +128,22 @@ module DataPath(decode, clk, reset, zero, RegWre, PCWre, IRWre, ALUSrcB, ALUOp, 
 	// ZE(imm) and SE(imm)
 	zero_extend	ZE(immediate, immZE);
 	sign_extend SE(immediate, immSE);
-	
+	sa_extend   SAE(sa, saSAE);
+	// extend out
+	mux_1bit extend_mux(origin_extend_wire, immZE, immSE, ExtSel);
+	mux_1bit sa_extend_mux(top_extend_wire, origin_extend_wire, saSAE,  SAExt);
 	// ~~~~~~~~~~~~~~~~~~~ MULTIPLEXERS ~~~~~~~~~~~~~~~~~~~ //
 
 	// Reg File inputs
 	read_mux	read_sel_mux(write_address, 5'b11111, rt, rd, RegOut); 
 	mux_1bit write_data_mux(write_data,PCout+4, MDRout,  WrRegData);
 	
-	// extend out
-	mux_1bit extend_mux(extend_wire, immZE, immSE, ExtSel);
+	
+	
+	
 
 	// ALU inputs
-	mux_1bit ALUSrcB_mux(sourceB, Bout, extend_wire, ALUSrcB);
+	mux_1bit ALUSrcB_mux(sourceB, Bout, top_extend_wire, ALUSrcB);
 
 	// ALUM2Reg mux
 	mux_1bit ALUM2Reg_mux(MDRin, ALU_wire, DMout, ALUM2Reg);

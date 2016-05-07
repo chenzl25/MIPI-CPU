@@ -19,12 +19,12 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module CU(decode, clk, reset, zero, RegWre, PCWre, IRWre, ALUSrcB, ALUOp, ALUM2Reg, RegOut, DataMemRw,
-     PCSrc, ExtSel, InsMemRW, WrRegData, state, next_state);
+     PCSrc, ExtSel, InsMemRW, WrRegData, SAExt , state, next_state);
 	input clk;
 	input reset;
 	input [5:0] decode;
 	input zero;
-	output reg RegWre,PCWre,IRWre,ALUSrcB,ALUM2Reg,DataMemRw,ExtSel, InsMemRW, WrRegData;
+	output reg RegWre,PCWre,IRWre,ALUSrcB,ALUM2Reg,DataMemRw,ExtSel, InsMemRW, WrRegData, SAExt;
 	
 	output reg [1:0] PCSrc;
 	output reg [1:0] RegOut;
@@ -61,6 +61,7 @@ module CU(decode, clk, reset, zero, RegWre, PCWre, IRWre, ALUSrcB, ALUOp, ALUM2R
 		IRWre = 0;      // write the IR
 		PCSrc = 2'b00;  // 00: pc+4, 01: pc=4+beq, 10: pc=rs, 11: pc=j_address
 		ExtSel = 0;     // signed extend
+		SAExt = 0;      // sa extend
 		ALUSrcB = 0;    // 0: reg2  , 1: extend
 		ALUOp = 3'b000; // add
 		DataMemRw = 0;  // mem write
@@ -112,7 +113,7 @@ module CU(decode, clk, reset, zero, RegWre, PCWre, IRWre, ALUSrcB, ALUOp, ALUM2R
 						op_ori :begin ALUOp = 3'b101; ALUSrcB = 1; end
 						op_move:begin ALUOp = 3'b000; end
 						op_slt :begin ALUOp = 3'b010; end
-						op_sll :begin ALUOp = 3'b100; ALUSrcB = 1; end
+						op_sll :begin ALUOp = 3'b100; ALUSrcB = 1; SAExt <= 1; end
 					endcase
 				end
 				sexe2: begin

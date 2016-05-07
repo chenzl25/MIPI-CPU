@@ -285,7 +285,7 @@ LAB15:    xsi_set_current_line(50, ng0);
     memset(t10, 0, 8);
     xsi_vlog_unsigned_lshift(t10, 32, t4, 32, t7, 32);
     t3 = (t0 + 1904);
-    xsi_vlogvar_wait_assign_value(t3, t10, 0, 0, 32, 0LL);
+    xsi_vlogvar_assign_value(t3, t10, 0, 0, 32);
     goto LAB25;
 
 LAB17:    xsi_set_current_line(51, ng0);

@@ -21,13 +21,13 @@
 module CPU(clk, reset, initPC,
 			  test_decode, test_zero, test_RegWre, test_PCWre, test_IRWre, test_ALUSrcB,
 			  test_ALUOp, test_ALUM2Reg, test_RegOut, test_DataMemRw,test_PCSrc, test_ExtSel,
-			  test_InsMemRW, test_WrRegData, test_state,test_next_state, PCout);
+			  test_InsMemRW, test_WrRegData, test_SAExt, test_state,test_next_state, PCout);
 	input clk, reset;
 	input [31:0] initPC;
 	
 	
 	wire [5:0] decode;
-	wire zero, RegWre,PCWre,ALUSrcB,ALUM2Reg,DataMemRw,ExtSel, InsMemRW, IRWre, WrRegData;
+	wire zero, RegWre,PCWre,ALUSrcB,ALUM2Reg,DataMemRw,ExtSel, InsMemRW, IRWre, WrRegData, SAExt;
 	wire [1:0] PCSrc;
 	wire [1:0] RegOut;
 	wire [2:0] ALUOp;
@@ -37,7 +37,7 @@ module CPU(clk, reset, initPC,
 	/////////////////////TEST OUTPUT//////////////////////////////
 	output [5:0] test_decode;
 	output test_zero, test_RegWre,test_PCWre,test_ALUSrcB,test_ALUM2Reg,test_DataMemRw,
-			 test_ExtSel, test_InsMemRW, test_IRWre, test_WrRegData;
+			 test_ExtSel, test_InsMemRW, test_IRWre, test_WrRegData, test_SAExt;
 	output [1:0] test_PCSrc;
 	output [1:0] test_RegOut;
 	output [2:0] test_ALUOp;
@@ -60,14 +60,15 @@ module CPU(clk, reset, initPC,
 	assign test_WrRegData = WrRegData;
 	assign test_state = state;
 	assign test_next_state = next_state;
+	assign test_SAExt = SAExt;
 	//////////////////////////////////////////////////////////////
 	
 	
 	CU _CU(decode, clk, reset, zero, RegWre, PCWre, IRWre, ALUSrcB, ALUOp, ALUM2Reg, RegOut, DataMemRw,
-     PCSrc, ExtSel, InsMemRW, WrRegData, state, next_state);
+     PCSrc, ExtSel, InsMemRW, WrRegData, SAExt, state, next_state);
 	
 	DataPath _DataPath(decode, clk, reset, zero, RegWre, PCWre, IRWre, ALUSrcB, ALUOp, ALUM2Reg, RegOut, DataMemRw,
-     PCSrc, ExtSel, InsMemRW, WrRegData, initPC, PCout);
+     PCSrc, ExtSel, InsMemRW, WrRegData, SAExt, initPC, PCout);
 	
 	
 endmodule

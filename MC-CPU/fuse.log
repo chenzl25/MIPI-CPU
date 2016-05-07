@@ -5,6 +5,7 @@ Turning on mult-threading, number of parallel sub-compilation jobs: 8
 Determining compilation order of HDL files
 Analyzing Verilog file "C:/Users/chenzl25/Desktop/MIPS-CPU/MC-CPU/zero_extend.v" into library work
 Analyzing Verilog file "C:/Users/chenzl25/Desktop/MIPS-CPU/MC-CPU/sign_extend.v" into library work
+Analyzing Verilog file "C:/Users/chenzl25/Desktop/MIPS-CPU/MC-CPU/sa_extend.v" into library work
 Analyzing Verilog file "C:/Users/chenzl25/Desktop/MIPS-CPU/MC-CPU/RegFile.v" into library work
 Analyzing Verilog file "C:/Users/chenzl25/Desktop/MIPS-CPU/MC-CPU/read_mux.v" into library work
 Analyzing Verilog file "C:/Users/chenzl25/Desktop/MIPS-CPU/MC-CPU/mux_2bit.v" into library work
@@ -19,7 +20,7 @@ Analyzing Verilog file "C:/Users/chenzl25/Desktop/MIPS-CPU/MC-CPU/CPU.v" into li
 Analyzing Verilog file "C:/Users/chenzl25/Desktop/MIPS-CPU/MC-CPU/CPUTest.v" into library work
 Analyzing Verilog file "G:/ISE14.4/14.4/ISE_DS/ISE//verilog/src/glbl.v" into library work
 Starting static elaboration
-WARNING:HDLCompiler:1016 - "C:/Users/chenzl25/Desktop/MIPS-CPU/MC-CPU/DataPath.v" Line 122: Port resetData is not connected to this instance
+WARNING:HDLCompiler:1016 - "C:/Users/chenzl25/Desktop/MIPS-CPU/MC-CPU/DataPath.v" Line 124: Port resetData is not connected to this instance
 Completed static elaboration
 Compiling module CU
 Compiling module IMem
@@ -28,8 +29,9 @@ Compiling module RegFile
 Compiling module holding_reg
 Compiling module zero_extend
 Compiling module sign_extend
-Compiling module read_mux
+Compiling module sa_extend
 Compiling module mux_1bit
+Compiling module read_mux
 Compiling module mux_2bit
 Compiling module ALU
 Compiling module DataPath
@@ -37,8 +39,8 @@ Compiling module CPU
 Compiling module CPUTest
 Compiling module glbl
 Time Resolution for simulation is 1ps.
-Waiting for 8 sub-compilation(s) to finish...
-Compiled 15 Verilog Units
+Waiting for 9 sub-compilation(s) to finish...
+Compiled 16 Verilog Units
 Built simulation executable C:/Users/chenzl25/Desktop/MIPS-CPU/MC-CPU/CPUTest_isim_beh.exe
-Fuse Memory Usage: 29404 KB
-Fuse CPU Usage: 1030 ms
+Fuse Memory Usage: 28760 KB
+Fuse CPU Usage: 1046 ms

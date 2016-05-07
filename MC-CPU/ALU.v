@@ -47,7 +47,7 @@ always @(sourceA, sourceB, ALUSel) begin
 		end
 		3'b010: output_data = ($signed(sourceA) < $signed(sourceB))? 1 : 0;
 		3'b011: output_data = (sourceA >> sourceB);
-		3'b100: output_data<= (sourceA << sourceB);
+		3'b100: output_data = (sourceA << sourceB);
 		3'b101: output_data = sourceA | sourceB;
 		4'b110: output_data = sourceA & sourceB;
 		4'b111: output_data = sourceA ^ sourceB;
