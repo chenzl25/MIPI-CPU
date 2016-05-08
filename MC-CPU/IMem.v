@@ -36,7 +36,7 @@
 	assign IDataOut[31:24] = ins_memory[IAddr+3];	
 	initial begin
 		count = 0;
-		// j 11100000 00000000 00000000 00001000
+		// j 11100000 00000000 00000000 00000010
 		// jump to address 8
 		ins_memory[0] = 8'b00000010;
 		ins_memory[1] = 8'b00000000;
